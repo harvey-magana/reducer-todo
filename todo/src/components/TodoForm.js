@@ -1,19 +1,34 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import '../App.css';
-import { initialTodoState, todoReducer } from '../reducer/todoReducer';
 
-const TodoForm = () => {
-    const [ state, dispatch ] = useReducer(initialTodoState, todoReducer);
+const TodoForm = (props) => {
+    
+    const [todo, setTodo] = React.useState("");
+
+    const handleChange = e => {
+        setTodo(e.target.value);
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        props.addTodo(todo);
+        setTodo("");
+      };
+
     return (
         <div>
-            TodoForm
-            <form>
-                <input 
-                    type="text"
-                    todo="item"
-                    value="some value"
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="todo">Todo text</label>
+                <br />
+                <input
+                id="todo"
+                className="todo-input"
+                onChange={handleChange}
+                value={todo}
                 />
-                <button>Add</button>
+                <button type="submit" className="add-btn">
+                Add
+                </button>
             </form>
         </div>
     )
