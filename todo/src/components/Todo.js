@@ -5,7 +5,7 @@ import { ACTIONS } from '../reducer/todoReducer';
 const Todo = ({props, dispatch, todo}) => {
     console.log(props)
     return (
-        <div>
+        <div className="todo">
             <span className={todo.completed ? "todo-completed" : null}>
                     {todo.name}
             </span>

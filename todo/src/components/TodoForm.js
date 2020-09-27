@@ -3,7 +3,7 @@ import Todo from "./Todo";
 import { todoReducer, initialTodoState, ACTIONS } from '../reducer/todoReducer';
 import '../App.css';
 
-const TodoForm = (props) => {
+const TodoForm = () => {
     const [ todos, dispatch ] = useReducer(todoReducer, [])
     const [ name, setName ] = useState('');
 
@@ -19,7 +19,7 @@ const TodoForm = (props) => {
     }
 
     return (
-        <div>
+        <div className="app">
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
@@ -28,9 +28,13 @@ const TodoForm = (props) => {
                 />
                 <button type="submit">Add</button>
             </form>
-            {todos.map((todo) => {
-                return(<Todo key={todo.id} todo={todo} dispatch={dispatch} />)
-            })}
+            <div>
+                <div className="todo-list">
+                {todos.map((todo) => {
+                    return(<Todo key={todo.id} todo={todo} dispatch={dispatch} />)
+                })}
+                </div>
+            </div>
         </div>
     )
 }
