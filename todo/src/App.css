@@ -51,11 +51,14 @@ h1 {
   background: #e8e8e8;
   border-radius: 2px;
   max-width: 23rem;
-  height: 3rem;
+  /*height: 3rem;*/
   padding: 5px;
   margin: 20px auto;
 }
 
+.penguin {
+  display: none;
+}
 .todo {
   align-items: center;
   background: #fff;
@@ -64,7 +67,7 @@ h1 {
   display: flex;
   font-size: 18px;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   padding: 3px 10px;
 }
 

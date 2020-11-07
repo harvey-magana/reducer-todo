@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from "react";
 import Todo from "./Todo";
-import { todoReducer, initialTodoState, ACTIONS } from '../reducer/todoReducer';
+import { todoReducer, ACTIONS } from '../reducer/todoReducer';
 import '../App.css';
 
 const TodoForm = () => {
