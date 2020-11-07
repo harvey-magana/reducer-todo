@@ -19,7 +19,8 @@ const TodoForm = () => {
     }
 
     return (
-        <div className="app">
+        <div className="app-form">
+            <h1>Reducer To Do Form</h1>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 

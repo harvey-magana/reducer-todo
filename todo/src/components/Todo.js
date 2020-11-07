@@ -9,8 +9,8 @@ const Todo = ({props, dispatch, todo}) => {
             <span className={todo.completed ? "todo-completed" : null}>
                     {todo.name}
             </span>
-            <button onClick={() => dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id }})}>Toggle</button>
-            <button onClick={() => dispatch({ type: ACTIONS.CLEAR_TODO, payload: { id: todo.id }})}>Clear</button>
+            <button className="toggle" onClick={() => dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id }})}>Toggle</button>
+            <button className="clear" onClick={() => dispatch({ type: ACTIONS.CLEAR_TODO, payload: { id: todo.id }})}>Clear</button>
         </div>
     )
 }

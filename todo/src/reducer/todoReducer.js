@@ -10,7 +10,7 @@ export const initialTodoState = {
     ADD_TODO: 'ADD_TODO',
     TOGGLE_TODO: 'TOGGLE_TODO',
     CLEAR_TODO: 'CLEAR_TODO'
-}
+    }
 
 function newTodo(name) {
     return { id: Date.now(), name: name, completed: false}
